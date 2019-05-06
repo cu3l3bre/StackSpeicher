@@ -74,6 +74,8 @@ int main()
 	cout << "Der Zeiger auf Zahl: " << ZeigerAufZahl << endl;
 	cout << "Der Wert auf den der Zeiger zeigt: " << *ZeigerAufZahl << endl;
 
+	*ZeigerAufZahl = 999;
+	cout << "Der Wert auf den der Zeiger zeigt: " << *ZeigerAufZahl << endl;
 
 
 	double Kommazahl = 3.1;
