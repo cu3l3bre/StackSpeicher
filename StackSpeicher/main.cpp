@@ -6,6 +6,24 @@ using namespace std;
 // globaler Gueltigskeitsbereich / scope
 int globaleZahl = 0;
 
+
+int BildeQuadrat(int Zahl) // Call by Value
+{
+	int Ergebnis = Zahl * Zahl;
+	
+	Zahl = 30; // die Originalzahl im Hauptprogramm wird nicht verandert
+
+	return Ergebnis;
+}
+
+
+// Funktion, die einen Zeiger als Parameter hat, Call by Reference
+void quadriereZahl(int* Zahl)
+{
+	*Zahl = *Zahl * *Zahl;
+}
+
+
 int main()
 {
 	cout << "Programm zu StackSpeicher" << endl;
@@ -89,6 +107,18 @@ int main()
 	cout << "ZeigerAufKommazahl Groesse: " << sizeof(ZeigerAufKommazahl) << endl;
 
 
+
+
+	/* Wat neues zum Montag Nachmittag :p */
+
+	int GanzeZahl = 8;
+	int Ergebnis = 0;
+	Ergebnis = BildeQuadrat(GanzeZahl);
+	cout << Ergebnis << endl;
+
+	// Adresse der Variable wird uebergeben
+	quadriereZahl(&GanzeZahl);
+	cout << GanzeZahl << endl;
 
 
 	system("pause");
